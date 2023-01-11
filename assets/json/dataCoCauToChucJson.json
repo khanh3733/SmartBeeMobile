@@ -1,0 +1,32 @@
+[
+    {
+        "stt": "1",
+        "MaPhong": "gddh",
+        "TenPhong": "Giám đốc điều hành"
+    },
+    {
+        "stt": "2",
+        "MaPhong": "gdkd",
+        "TenPhong": "Giám đốc kinh doanh   "
+    },
+    {
+        "stt": "3",
+        "MaPhong": "da",
+        "TenPhong": "Phòng Dự án"
+    },
+    {
+        "stt": "4",
+        "MaPhong": "hcth",
+        "TenPhong": "Phòng Hành chính tổng hợp"
+    },
+    {
+        "stt": "5",
+        "MaPhong": "tk",
+        "TenPhong": "Phòng Triển khai"
+    },
+    {
+        "stt": "6",
+        "MaPhong": "dev",
+        "TenPhong": "Phòng Code"
+    }
+]

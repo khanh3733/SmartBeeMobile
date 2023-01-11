@@ -1,0 +1,17 @@
+[
+    {
+        "Muc": "dv",
+        "TieuMuc" : "",
+        "TenMuc/TieuMuc": "Hoạt động Dịch vụ"
+    },
+    {
+        "Muc": "",
+        "TieuMuc" : "dv01",
+        "TenMuc/TieuMuc": "Dịch vụ Tư vấn QLDA"
+    },
+    {
+        "Muc": "",
+        "TieuMuc" : "dv02",
+        "TenMuc/TieuMuc": "Dịch vụ Tư vấn lập đề cương"
+    }
+]

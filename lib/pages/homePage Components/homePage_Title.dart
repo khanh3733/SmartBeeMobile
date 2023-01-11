@@ -9,16 +9,31 @@ class homePage_Title extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 75,
-      alignment: Alignment.centerLeft,
-      margin: EdgeInsets.symmetric(horizontal: 42),
-      child: Text(
-        title,
-        style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w700,
-            color: Color(0xff59843E)),
-      ),
-    );
+        padding: const EdgeInsets.only(top: 200),
+        child: Column(children: [
+          Container(
+            width: 210,
+            height: 200,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/logobee.png"),
+              ),
+            ),
+          ),
+          Padding(padding: const EdgeInsets.only(top: 70)),
+          Container(
+            alignment: Alignment.topLeft,
+            margin: const EdgeInsets.symmetric(horizontal: 30),
+            height: 75,
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 34,
+                fontWeight: FontWeight.w500,
+                color: Color(0xff59843E),
+              ),
+            ),
+          )
+        ]));
   }
 }

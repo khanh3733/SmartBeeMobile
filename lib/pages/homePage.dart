@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/homePage%20Components/homePage_Title.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:smartbee_mobile/network/network_request.dart';
+import '../model/post.dart';
+import 'homePage Components/homePage_AppBar.dart';
+import 'homePage Components/homePage_Title.dart';
+import 'homePage Components/homePage_start.dart';
 
 class homePage extends StatelessWidget {
   final _controller = PageController();
@@ -17,36 +21,14 @@ class homePage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                color: Color(0xff59843E),
-                image: DecorationImage(
-                  image: AssetImage("assets/images/logoHidayWhite.png"),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 220,
-                bottom: 95,
-              ),
-              child: Container(
-                width: 220,
-                height: 155,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/logobee.png"),
-                  ),
-                ),
-              ),
-            ),
+            homePage_AppBar(),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 10),
-                  height: 200,
+                  height: 650,
+                  width: 400,
                   child: PageView(
                     controller: _controller,
                     children: [
@@ -55,7 +37,7 @@ class homePage extends StatelessWidget {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 10, bottom: 15),
+                            padding: EdgeInsets.only(top: 10, bottom: 30),
                             child:
                                 homePage_Title(title: "Quản lý việc Smartbee"),
                           ),
@@ -63,38 +45,14 @@ class homePage extends StatelessWidget {
                             onTap: () {
                               Navigator.pushNamed(context, "loginPage");
                             },
-                            child: Container(
-                              height: 50,
-                              margin: EdgeInsets.symmetric(horizontal: 45),
-                              padding: EdgeInsets.symmetric(horizontal: 20),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Color(0xffFAB512),
-                              ),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "Bắt đầu",
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      color: Color(0xff59843E),
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  Spacer(),
-                                  Icon(
-                                    Icons.arrow_circle_right,
-                                    color: Color(0xff59843E),
-                                  )
-                                ],
-                              ),
-                            ),
+                            child: homePage_start(),
                           ),
                         ],
                       ),
                     ],
                   ),
                 ),
+                //smoothPageIndicator
                 SmoothPageIndicator(
                   controller: _controller,
                   count: 3,
